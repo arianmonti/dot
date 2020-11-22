@@ -1,12 +1,9 @@
-<html>
-	<head>
-		<title>Index</title>
-	</head>
-	<body>
-		<ul>
-			{% for post in posts %}
-			<li>{{ post.title }}</li>
-			{% endfor %}
-		</ul>
-	</body>
-</html>
+{% extends 'base.html' %}
+
+{% block app %}
+	<ul>
+		{% for post in posts %}
+		<li>{{ post.title }}</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
