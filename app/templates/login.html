@@ -1,12 +1,10 @@
 {% extends 'base.html' %}
 
 {% block app %}
-	<form action="" method="POST">
+	<form action="" method="POST" novalidate>
 		{% csrf_token %}
-		<label for="username">username</label><br>
-		<input type="text" name="username" id="username" required><br>
-		<label for="password">password</label><br>
-		<input type="password" name="password" id="password" required><br>
+		{{ form.as_p }}
 		<input type="submit" value="Login">
 	</form>
+	<p>New user? <a href="{% url 'register' %}">Click to register!</a></p>
 {% endblock %}
